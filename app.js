@@ -45,6 +45,10 @@ app.post("/", (req, res) => {
        };
 
 
+// la apikey de mailchimp fueron agregadas a las variables de entorno en heroku a traves del comando:
+// heroku config:set MAIL_KEY="aca va la clave"
+// mas info sobre variables de entorno: https://devcenter.heroku.com/articles/config-vars
+
     mailchimp.setConfig({
         apiKey: process.env.MAIL_KEY,
         server: "us21",
