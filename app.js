@@ -4,8 +4,7 @@ const request = require("request")
 const https = require("https")
 const mailchimp = require("@mailchimp/mailchimp_marketing")
 
-const PORT = 3000
-const mailkey = "c0e7fbd372b67e3ac4f052b2f55296eb-us21"
+const PORT = process.env.PORT || 3000
 const listID = 'b5eed1464b'
 
 const app = express()
@@ -47,7 +46,7 @@ app.post("/", (req, res) => {
 
 
     mailchimp.setConfig({
-        apiKey: "c0e7fbd372b67e3ac4f052b2f55296eb-us21",
+        apiKey: process.env.MAIL_KEY,
         server: "us21",
       });
 
@@ -68,6 +67,10 @@ app.post("/", (req, res) => {
 
          run().catch(e => res.sendFile(__dirname + "/failure.html"));
  
+})
+
+app.post("/comeback", (req, res) => {
+    res.redirect('/')  
 })
 
 
