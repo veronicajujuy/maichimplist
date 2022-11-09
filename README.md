@@ -6,7 +6,7 @@ This app is mailing list, who allows you to suscribe. Because I'm fan of Breakin
 
 If you like to suscribe be my guest!
 
-### Verion Live!!
+### Version Live!!
 [version live](https://mailchimpapp01.herokuapp.com/) 
 
 > The tecnologies using for this proyects are | Las tecnologias aplicadas para este proyecto fueron:
